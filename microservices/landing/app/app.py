@@ -23,6 +23,12 @@ def divide(n1, n2):
 def index():
     number_1 = request.form.get("first")
     number_2 = request.form.get('second')
+    if number_1 == None:
+        number_1 = '0'
+    if number_2 == None:
+        number_2 = '0'
+    number_1 = int(number_1)
+    number_2 = int(number_2)
     operation = request.form.get('operation')
     result = 0
     if operation == 'add':
