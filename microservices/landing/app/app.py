@@ -7,6 +7,38 @@ app = Flask(__name__)
 app.secret_key = 'thisisjustarandomstring'
 
 
+@app.route('/', methods=['POST', 'GET'])
+def index():
+    num1 = request.form.get("first")
+    num2 = request.form.get('second')
+    if num1 == None:
+        num1 = '0'
+    if num2 == None:
+        num2 = '0'
+    operation = request.form.get('operation')
+    result = 0
+    if operation == 'add':
+        result = requests.get('http://addition:5046/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'minus':
+        result =  requests.get('http://subtraction:5047/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'multiply':
+        result = requests.get('http://multiplication:5048/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'divide':
+        result = requests.get('http://division:5049/'+str(num1) +'/'+str(num2)).text
+
+    flash(f'The result of operation {operation} on {num1} and {num2} is {result}')
+
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(
+        debug=True,
+        port=5050,
+        host="0.0.0.0"
+    )
+
+
+'''
 def add(n1, n2):
     return n1+n2
 
@@ -18,6 +50,7 @@ def multiply(n1, n2):
 
 def divide(n1, n2):
     return n1/n2
+
 
 def gcd(n1, n2):
     while(n2):
@@ -59,27 +92,9 @@ def equal(n1, n2):
         return True
     else:
         return False
+'''
 
-@app.route('/', methods=['POST', 'GET'])
-def index():
-    number_1 = request.form.get("first")
-    number_2 = request.form.get('second')
-    if number_1 == None:
-        number_1 = '0'
-    if number_2 == None:
-        number_2 = '0'
-    number_1 = int(number_1)
-    number_2 = int(number_2)
-    operation = request.form.get('operation')
-    result = 0
-    if operation == 'add':
-        result = add(number_1, number_2)
-    elif operation == 'minus':
-        result =  minus(number_1, number_2)
-    elif operation == 'multiply':
-        result = multiply(number_1, number_2)
-    elif operation == 'divide':
-        result = divide(number_1, number_2)
+'''
     elif operation == 'GCD':
         result = gcd(number_1, number_2)
     elif operation == 'LCM':
@@ -94,14 +109,4 @@ def index():
         result = less(number_1, number_2)
     elif operation == 'equal':
         result = equal(number_1, number_2)
-
-    flash(f'The result of operation {operation} on {number_1} and {number_2} is {result}')
-
-    return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run(
-        debug=True,
-        port=5050,
-        host="0.0.0.0"
-    )
+'''
