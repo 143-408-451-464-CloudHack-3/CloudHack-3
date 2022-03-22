@@ -6,4 +6,5 @@ RUN apk add --update \
 && pip install -r requirements.txt \ 
 && rm -rf /var/cache/apk/*
 COPY ./app/. .
+EXPOSE 5048
 CMD ["python","subtraction.py"]

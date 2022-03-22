@@ -4,19 +4,35 @@ services:
   addition:
     build: ./landing/app/addition
     ports: 
-      - 5046:5050 
+      - 5046:5046
+    networks:
+       sample:
+          aliases:
+            - addition 
   multiplication:
     build: ./landing/app/multiplication
     ports: 
-      - 5047:5050
+      - 5047:5047
+    networks:
+       sample:
+          aliases:
+            - multiplication 
   subtraction:
     build: ./landing/app/subtraction
     ports: 
-      - 5048:5050
+      - 5048:5048
+    networks:
+       sample:
+          aliases:
+            - subtraction 
   division:
     build: ./landing/app/division
     ports: 
-      - 5049:5050
+      - 5049:5049
+    networks:
+       sample:
+          aliases:
+            - division 
   landing-service:
     build: ./landing  # path is relative to docker-compose.yml location
     hostname: landing-service

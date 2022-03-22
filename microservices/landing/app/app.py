@@ -18,13 +18,13 @@ def index():
     operation = request.form.get('operation')
     result = 0
     if operation == 'add':
-        result = requests.get('http://addition:5046/'+str(num1) +'/'+str(num2)).text
+        result = requests.get('http://addition:5046/add/'+str(num1) +'/'+str(num2))
     elif operation == 'minus':
-        result =  requests.get('http://subtraction:5047/'+str(num1) +'/'+str(num2)).text
+        result =  requests.get('http://subtraction:5047/sub/'+str(num1) +'/'+str(num2))
     elif operation == 'multiply':
-        result = requests.get('http://multiplication:5048/'+str(num1) +'/'+str(num2)).text
+        result = requests.get('http://multiplication:5048/mul/'+str(num1) +'/'+str(num2))
     elif operation == 'divide':
-        result = requests.get('http://division:5049/'+str(num1) +'/'+str(num2)).text
+        result = requests.get('http://division:5049/div/'+str(num1) +'/'+str(num2))
 
     flash(f'The result of operation {operation} on {num1} and {num2} is {result}')
 
