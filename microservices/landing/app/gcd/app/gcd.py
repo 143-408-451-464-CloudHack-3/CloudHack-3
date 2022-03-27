@@ -5,7 +5,6 @@ app = Flask(__name__)
 api = Api(app)
 
 
-<<<<<<< HEAD
 class GCD(Resource):
     def get(self,x,y):
         n1 = float(x)
@@ -17,22 +16,4 @@ class GCD(Resource):
 api.add_resource(GCD,'/gcd/<x>/<y>')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=5053)
-=======
-class Gcd(Resource):
-    def get(self,x,y):
-        if x>y:
-			small=y
-		else:
-			small=x
-		for i in range(1,small+1):
-			if((x%i==0) and (y%i==0)):
-				gcd=i
-				
-		return gcd
-
-api.add_resource(Gcd,'/gcd/<x>/<y>')
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5053)
->>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac
+    app.run(host="0.0.0.0",port=5057)

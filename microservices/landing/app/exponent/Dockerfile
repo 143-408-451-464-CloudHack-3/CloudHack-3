@@ -6,10 +6,5 @@ RUN apk add --update \
 && pip install -r requirements.txt \ 
 && rm -rf /var/cache/apk/*
 COPY ./app/. .
-<<<<<<< HEAD
-EXPOSE 5052
+EXPOSE 5056
 CMD ["python","Exponent.py"]
-=======
-EXPOSE 5054
-CMD ["python","exponent.py"]
->>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac

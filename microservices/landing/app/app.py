@@ -18,27 +18,27 @@ def index():
     operation = request.form.get('operation')
     result = 0
     if operation == 'add':
-        result = requests.get('http://addition:5046/add/'+str(num1) +'/'+str(num2)).text
+        result = requests.get('http://addition:5051/add/'+str(num1) +'/'+str(num2)).text
     elif operation == 'minus':
-        result =  requests.get('http://subtraction:5048/sub/'+str(num1) +'/'+str(num2)).text
+        result =  requests.get('http://subtraction:5053/sub/'+str(num1) +'/'+str(num2)).text
     elif operation == 'multiply':
-        result = requests.get('http://multiplication:5047/mul/'+str(num1) +'/'+str(num2)).text
+        result = requests.get('http://multiplication:5052/mul/'+str(num1) +'/'+str(num2)).text
     elif operation == 'divide':
-        result = requests.get('http://division:5049/div/'+str(num1) +'/'+str(num2)).text
-    elif operation == 'GCD':
-        result = requests.get('http://gcd:5053/gcd/'+str(num1) +'/'+str(num2)).text
-    elif operation == 'LCM':
-        result = requests.get('http://lcm:5055/lcm/'+str(num1) +'/'+str(num2)).text
-    elif operation == 'modulus':
-        result = requests.get('http://modulus:5057/modulus/'+str(num1) +'/'+str(num2)).text
-    elif operation == 'exponent':
-        result = requests.get('http://exponent:5052/exponent/'+str(num1) +'/'+str(num2)).text
-    elif operation == 'greater':
-        result = requests.get('http://greatthan:5054/greatthan/'+str(num1) +'/'+str(num2)).text
-    elif operation == 'less':
-        result = requests.get('http://lessthan:5056/lessthan/'+str(num1) +'/'+str(num2)).text
+        result = requests.get('http://division:5054/div/'+str(num1) +'/'+str(num2)).text
     elif operation == 'equal':
-        result = requests.get('http://equalto:5051/equalto/'+str(num1) +'/'+str(num2)).text
+        result = requests.get('http://equalto:5055/equalto/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'exponent':
+        result = requests.get('http://exponent:5056/exponent/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'GCD':
+        result = requests.get('http://gcd:5057/gcd/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'greater':
+        result = requests.get('http://greatthan:5058/greatthan/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'LCM':
+        result = requests.get('http://lcm:5059/lcm/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'less':
+        result = requests.get('http://lessthan:5060/lessthan/'+str(num1) +'/'+str(num2)).text
+    elif operation == 'modulus':
+        result = requests.get('http://modulus:5061/modulus/'+str(num1) +'/'+str(num2)).text
 
     flash(f'The result of operation {operation} on {num1} and {num2} is {result}')
 
@@ -50,12 +50,3 @@ if __name__ == '__main__':
         port=5050,
         host="0.0.0.0"
     )
-<<<<<<< HEAD
-=======
-
-
-'''
-def exponent(n1, n2):
-    return n1**n2
-'''
->>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac

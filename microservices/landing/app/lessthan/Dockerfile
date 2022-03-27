@@ -6,9 +6,5 @@ RUN apk add --update \
 && pip install -r requirements.txt \ 
 && rm -rf /var/cache/apk/*
 COPY ./app/. .
-EXPOSE 5056
-<<<<<<< HEAD
+EXPOSE 5060
 CMD ["python","LessThan.py"]
-=======
-CMD ["python","lessthan.py"]
->>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac

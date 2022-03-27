@@ -4,7 +4,7 @@ services:
   addition:
     build: ./landing/app/addition
     ports: 
-      - 5046:5046
+      - 5051:5051
     networks:
        sample:
           aliases:
@@ -12,7 +12,7 @@ services:
   multiplication:
     build: ./landing/app/multiplication
     ports: 
-      - 5047:5047
+      - 5052:5052
     networks:
        sample:
           aliases:
@@ -20,7 +20,7 @@ services:
   subtraction:
     build: ./landing/app/subtraction
     ports: 
-      - 5048:5048
+      - 5053:5053
     networks:
        sample:
           aliases:
@@ -28,7 +28,7 @@ services:
   division:
     build: ./landing/app/division
     ports: 
-      - 5049:5049
+      - 5054:5054
     networks:
        sample:
           aliases:
@@ -36,7 +36,7 @@ services:
   equalto:
     build: ./landing/app/EqualTo
     ports: 
-      - 5051:5051
+      - 5055:5055
     networks:
        sample:
           aliases:
@@ -44,7 +44,7 @@ services:
   exponent:
     build: ./landing/app/Exponent
     ports: 
-      - 5052:5052
+      - 5056:5056
     networks:
        sample:
           aliases:
@@ -52,7 +52,7 @@ services:
   gcd:
     build: ./landing/app/GCD
     ports: 
-      - 5053:5053
+      - 5057:5057
     networks:
        sample:
           aliases:
@@ -60,7 +60,7 @@ services:
   greaterthan:
     build: ./landing/app/GreaterThan
     ports: 
-      - 5054:5054
+      - 5058:5058
     networks:
        sample:
           aliases:
@@ -68,7 +68,7 @@ services:
   lcm:
     build: ./landing/app/LCM
     ports: 
-      - 5055:5055
+      - 5059:5059
     networks:
        sample:
           aliases:
@@ -76,7 +76,7 @@ services:
   lessthan:
     build: ./landing/app/LessThan
     ports: 
-      - 5056:5056
+      - 5060:5060
     networks:
        sample:
           aliases:
@@ -84,7 +84,7 @@ services:
   modulus:
     build: ./landing/app/Modulus
     ports: 
-      - 5057:5057
+      - 5061:5061
     networks:
        sample:
           aliases:

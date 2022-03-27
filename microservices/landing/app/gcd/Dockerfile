@@ -6,9 +6,5 @@ RUN apk add --update \
 && pip install -r requirements.txt \ 
 && rm -rf /var/cache/apk/*
 COPY ./app/. .
-EXPOSE 5053
-<<<<<<< HEAD
+EXPOSE 5057
 CMD ["python","GCD.py"]
-=======
-CMD ["python","gcd.py"]
->>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac

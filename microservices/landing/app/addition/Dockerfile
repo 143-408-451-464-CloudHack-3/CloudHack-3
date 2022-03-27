@@ -6,5 +6,5 @@ RUN apk add --update \
 && pip install -r requirements.txt \ 
 && rm -rf /var/cache/apk/*
 COPY ./app/. .
-EXPOSE 5046
+EXPOSE 5051
 CMD ["python","addition.py"]

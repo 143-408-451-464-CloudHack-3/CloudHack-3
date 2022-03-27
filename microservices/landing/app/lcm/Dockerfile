@@ -6,9 +6,5 @@ RUN apk add --update \
 && pip install -r requirements.txt \ 
 && rm -rf /var/cache/apk/*
 COPY ./app/. .
-EXPOSE 5055
-<<<<<<< HEAD
+EXPOSE 5059
 CMD ["python","LCM.py"]
-=======
-CMD ["python","lcm.py"]
->>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac
