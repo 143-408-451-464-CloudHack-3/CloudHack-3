@@ -50,3 +50,12 @@ if __name__ == '__main__':
         port=5050,
         host="0.0.0.0"
     )
+<<<<<<< HEAD
+=======
+
+
+'''
+def exponent(n1, n2):
+    return n1**n2
+'''
+>>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac

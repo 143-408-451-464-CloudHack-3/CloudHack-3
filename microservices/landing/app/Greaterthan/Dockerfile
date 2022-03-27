@@ -7,4 +7,9 @@ RUN apk add --update \
 && rm -rf /var/cache/apk/*
 COPY ./app/. .
 EXPOSE 5054
+<<<<<<< HEAD
 CMD ["python","GreaterThan.py"]
+=======
+CMD ["python","modulus.py"]
+
+>>>>>>> 41b0828ec655feba5624de84a1744a2a7c3486ac
